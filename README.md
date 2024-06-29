@@ -1,12 +1,12 @@
 # SAP Hello World
 
-A basic `Node.js` RESTful API that persists data in a PostgreSQL DB, can deploy and run in SAP Cloud Platform Cloud Foundry Environment.
+A basic `NodeJS` RESTful API that persists data in a PostgreSQL DB, can deploy and run in SAP Cloud Platform Cloud Foundry Environment.
 
 ## Prerequisites
 
 - You [signed up](https://account.hanatrial.ondemand.com/register) for a [trial account](https://account.hanatrial.ondemand.com/) in SAP Cloud Platform, or you have a productive account.
 - Once you got your account, you performed the steps described in [Getting Started with Cloud Foundry](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/b8ee7894fe0b4df5b78f61dd1ac178ee.html).
-- You have basic knowledge about [Node.js: Development](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3a7a0bece0d044eca59495965d8a0237.html), for example, [Create a Node.js Application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/772b45ce6c46492b908d4c985add932a.html) and [SAP NPM Registry](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/fe672690385a4541b45622a9088f4503.html). Please make sure that you bookmark these pages: Later [SAP Node.js Packages](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/92f1bce8f72946c180d198e21f74a68c.html) and [Secure Node.js Applications](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3a8e4372f8e74d05b4ed03a484865e08.html) are also relevant.
+- You have basic knowledge about [NodeJS: Development](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3a7a0bece0d044eca59495965d8a0237.html), for example, [Create a NodeJS Application](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/772b45ce6c46492b908d4c985add932a.html) and [SAP NPM Registry](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/fe672690385a4541b45622a9088f4503.html). Please make sure that you bookmark these pages: Later [SAP NodeJS Packages](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/92f1bce8f72946c180d198e21f74a68c.html) and [Secure NodeJS Applications](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/3a8e4372f8e74d05b4ed03a484865e08.html) are also relevant.
 - For more information about working with NPM registry, see this [blog](https://blogs.sap.com/2017/05/16/sap-npm-registry-launched-making-the-lives-of-node.js-developers-easier/).
 
 ## Step 1: Configure NPM on your machine to ensure all subsequent NPM calls work.
@@ -311,3 +311,8 @@ $ cf logs sapcpcfhw --recent
 For more information on these commands, see [Getting Started with Cloud Foundry](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/b8ee7894fe0b4df5b78f61dd1ac178ee.html) and [Deploy an Application](http://docs.cloudfoundry.org/devguide/deploy-apps/deploy-app.html).
 
 Check the output of this command, and write down the URL created for the application. As a result you should be able to browse `https://<URL for your app>/users`. If you want to use the `Postman` collection above, please adjust the URL for the requests in the Cloud folder to the allocated `<URL for your app>`.
+
+References
+----------
+
+- Cloud Foundry - Hello World Sample using NodeJS, _https://github.com/SAP-samples/cloud-cf-helloworld-nodejs_
