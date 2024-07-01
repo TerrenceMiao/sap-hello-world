@@ -17,7 +17,49 @@ Execute the following command:
 npm config set @sap:registry https://registry.npmjs.org
 ```
 
-## Step 2: Run the service locally.
+## Step 2: Authentication
+
+To log on, access your endpoint with the following command:
+
+```
+$ cf api https://api.cf.us10-001.hana.ondemand.com
+Setting API endpoint to https://api.cf.us10-001.hana.ondemand.com...
+OK
+
+API endpoint:   https://api.cf.us10-001.hana.ondemand.com
+API version:    3.166.0
+
+Not logged in. Use 'cf login' or 'cf login --sso' to log in.
+```
+
+Depending upon the landscape your account was created in, to log on use the following command:
+
+```
+$ cf login --sso
+API endpoint: https://api.cf.us10-001.hana.ondemand.com
+
+Temporary Authentication Code ( Get one at https://login.cf.us10-001.hana.ondemand.com/passcode ):
+Authenticating...
+OK
+
+Targeted org 5c66f386trial_org.
+
+Targeted space Spikes.
+
+API endpoint:   https://api.cf.us10-001.hana.ondemand.com
+API version:    3.166.0
+user:           terrence.miao@paradise.net
+org:            5c66f386trial_org
+space:          Spikes
+```
+
+If you have access to more than 1 org or space, execute the following command:
+
+```
+$ cf target -o ORG -s SPACE
+```
+
+## Step 3: Run the service locally.
 
 - Clone this repo to your machine.  
 - In the folder you cloned into, execute the `npm install` command.
@@ -25,7 +67,7 @@ npm config set @sap:registry https://registry.npmjs.org
 - To get all users or the details of one user, browse `http://<ip>:8088/users` or `http://<ip>:8088/users/2`.
 - To add another entry to the list of users using the POST operation use, for example, the `Postman` extension of Chrome. (PUT and DELETE are not yet implemented). To test these operations, import the file `SAP-CP-CF_Hello_World.postman_collection.json` from this repository into `Postman`.  
 
-## Step 3: Create the PostgreSQL service instance.
+## Step 4: Create the PostgreSQL service instance.
 
 Perform the following command:
 
@@ -169,47 +211,7 @@ memory usage:   128M
 
 For more information about this command, see the [documentation](https://docs.cloudfoundry.org/devguide/services/managing-services.html).
 
-## Step 4: Push to Cloud and run the service.
-
-To log on, access your endpoint with the following command:
-
-```
-$ cf api https://api.cf.us10.hana.ondemand.com
-Setting API endpoint to https://api.cf.us10.hana.ondemand.com...
-OK
-
-API endpoint:   https://api.cf.us10.hana.ondemand.com
-API version:    3.166.0
-
-Not logged in. Use 'cf login' or 'cf login --sso' to log in.
-```
-
-Depending upon the landscape your account was created in, to log on use the following command:
-
-```
-$ cf login --sso
-API endpoint: https://api.cf.us10-001.hana.ondemand.com
-
-Temporary Authentication Code ( Get one at https://login.cf.us10-001.hana.ondemand.com/passcode ):
-Authenticating...
-OK
-
-Targeted org 5c66f386trial_org.
-
-Targeted space Spikes.
-
-API endpoint:   https://api.cf.us10-001.hana.ondemand.com
-API version:    3.166.0
-user:           terrence.miao@paradise.net
-org:            5c66f386trial_org
-space:          Spikes
-```
-
-If you have access to more than 1 org or space, execute the following command:
-
-```
-$ cf target -o ORG -s SPACE
-```
+## Step 5: Push to Cloud and run the service.
 
 To deploy the application to SAP Cloud Platform Cloud Foundry Environment, execute the following command:
 
