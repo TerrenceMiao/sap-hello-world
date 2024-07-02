@@ -310,6 +310,10 @@ start command:   npm start
 $ cf logs sapcpcfhw --recent
 ```
 
+![GitLab Pipeline](GitLab%20Pipeline.png "GitLab Pipeline")
+
+![GitLab Variables](GitLab%20Variables.png "GitLab Variables")
+
 For more information on these commands, see [Getting Started with Cloud Foundry](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/b8ee7894fe0b4df5b78f61dd1ac178ee.html) and [Deploy an Application](http://docs.cloudfoundry.org/devguide/deploy-apps/deploy-app.html).
 
 Check the output of this command, and write down the URL created for the application. As a result you should be able to browse `https://<URL for your app>/users`. If you want to use the `Postman` collection above, please adjust the URL for the requests in the Cloud folder to the allocated `<URL for your app>`.

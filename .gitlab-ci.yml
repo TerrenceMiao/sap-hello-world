@@ -1,0 +1,24 @@
+image: geertjanklaps/node-cf-cli:latest
+
+stages:
+  - build
+  - deploy
+
+build-and-test:
+  stage: build
+  script:  |
+    echo "node version:" `node -v`
+    echo "npm version:" `npm -v`
+
+    npm install
+
+deploy-SAP-Cloud-Foundry:
+  stage: deploy
+  before_script: |
+    cf7 login -a $SAP_API_ENDPOINT -u $SAP_USERNAME -p $SAP_PASSWORD -o $SAP_ORGANISATION -s $SAP_SPACE
+  script: |
+    cf7 push --random-route
+  after_script: |
+    cf7 logout
+  dependencies:
+    - build-and-test
